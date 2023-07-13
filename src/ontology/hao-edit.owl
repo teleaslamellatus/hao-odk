@@ -7,51 +7,45 @@ Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
-
-Prefix(:=<http://purl.obolibrary.org/obo/hao.owl#>)
 Prefix(HAO:=<http://purl.obolibrary.org/obo/HAO#>)
 Prefix(obo:=<http://purl.obolibrary.org/obo/>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(foaf:=<http://xmlns.com/foaf/0.1/>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(figure:=<http://api.hymao.org/api/figure/>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(x_0.1:=<http://xmlns.com/foaf/0.1/>)
+Prefix(x_1.1:=<http://purl.org/dc/elements/1.1/>)
+Prefix(term:=<http://purl.org/dc/terms/>)
+
+Prefix(term:=<http://purl.org/dc/terms/>)
+Prefix(chebi:=<http://purl.obolibrary.org/obo/chebi/>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(terms:=<http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/>)
+Prefix(x_0.1:=<http://xmlns.com/foaf/0.1/>)
+Prefix(x_1.1:=<http://purl.org/dc/elements/1.1/>)
+Prefix(chebi2:=<http://purl.obolibrary.org/obo/chebi#>)
+Prefix(chebi3:=<http://purl.obolibrary.org/obo/chebi#2>)
+Prefix(chebi4:=<http://purl.obolibrary.org/obo/chebi#3>)
+Prefix(chebi5:=<http://purl.obolibrary.org/obo/chebi#1>)
+Prefix(ubprop:=<http://purl.obolibrary.org/obo/ubprop#>)
+Prefix(subsets:=<http://purl.obolibrary.org/obo/ro/subsets#>)
+Prefix(oboInOwl:=<ttp://www.geneontology.org/formats/oboInOwl#>)
+Prefix(ncbitaxon:=<http://purl.obolibrary.org/obo/ncbitaxon#>)
+Prefix(caloha-reqs-vetted:=<http://purl.obolibrary.org/obo/caloha-reqs-vetted#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/hao.owl>
-
 Import(<http://purl.obolibrary.org/obo/hao/imports/aism_import.owl>)
 
-
-Annotation(dcterms:description "None")
-Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
-Annotation(dcterms:title "Hymenoptera Anatomy Ontology")
-
-
-Declaration(Class(<http://purl.obolibrary.org/obo/HAO_0000000>))
-Declaration(AnnotationProperty(dcterms:description))
-Declaration(AnnotationProperty(dcterms:license))
-Declaration(AnnotationProperty(dcterms:title))
-
-############################
-#   Annotation Properties
-############################
-
-AnnotationAssertion(rdfs:label dcterms:description "description")
-AnnotationAssertion(rdfs:label dcterms:license "license")
-AnnotationAssertion(rdfs:label dcterms:title "title")
+Annotation(x_1.1:contributor "István Mikó (imiko) https://orcid.org/0000-0003-2938-9075")
+Annotation(x_1.1:contributor "Jennifer C. Girón (jgiron) https://orcid.org/0000-0002-0851-6883")
+Annotation(x_1.1:contributor "Sergei Tarasov (starasov) https://orcid.org/0000-0001-5237-2330")
+Annotation(x_1.1:description "The Hymenoptera Anatomy Ontology (HAO) contains terms used to describe Hymenoptera anatomy phenotypes."@en)
+Annotation(x_1.1:title "Hymenoptera Anatomy Ontology"@en)
+Annotation(term:license <https://creativecommons.org/licenses/by/4.0/>)
 
 ############################
 #   Classes
 ############################
-
-# Class: <http://purl.obolibrary.org/obo/HAO_0000000> (root node)
-
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/HAO_0000000> "root node"@en)
-
 
 Declaration(Class(obo:HAO_0000000))
 Declaration(Class(obo:HAO_0000001))
@@ -2658,7 +2652,6 @@ Declaration(Class(obo:HAO_0002602))
 Declaration(Class(obo:HAO_0002603))
 Declaration(Class(foaf:Image))
 Declaration(ObjectProperty(obo:BFO_0000050))
-Declaration(ObjectProperty(obo:DUMMY_TYPDEF_112))
 Declaration(ObjectProperty(obo:OBO_REL_0000004))
 Declaration(ObjectProperty(obo:RO_0002220))
 Declaration(ObjectProperty(HAO:_attached_to))
@@ -5471,32 +5464,6 @@ AnnotationAssertion(rdfs:label oboInOwl:hasRelatedSynonym "has_related_synonym")
 #   Object Properties
 ############################
 
-# Object Property: obo:BFO_0000050 (part_of)
-
-AnnotationAssertion(obo:IAO_0000427 obo:BFO_0000050 "true"^^xsd:boolean)
-AnnotationAssertion(oboInOwl:id obo:BFO_0000050 "BFO:0000050")
-AnnotationAssertion(rdfs:label obo:BFO_0000050 "part_of")
-TransitiveObjectProperty(obo:BFO_0000050)
-
-# Object Property: obo:DUMMY_TYPDEF_112 (connected via conjunctiva)
-
-AnnotationAssertion(oboInOwl:id obo:DUMMY_TYPDEF_112 "DUMMY_TYPDEF:112")
-AnnotationAssertion(rdfs:label obo:DUMMY_TYPDEF_112 "connected via conjunctiva")
-TransitiveObjectProperty(obo:DUMMY_TYPDEF_112)
-ReflexiveObjectProperty(obo:DUMMY_TYPDEF_112)
-
-# Object Property: obo:OBO_REL_0000004 (integral_part_of)
-
-AnnotationAssertion(obo:IAO_0000427 obo:OBO_REL_0000004 "true"^^xsd:boolean)
-AnnotationAssertion(oboInOwl:id obo:OBO_REL_0000004 "OBO_REL:0000004")
-AnnotationAssertion(rdfs:label obo:OBO_REL_0000004 "integral_part_of")
-TransitiveObjectProperty(obo:OBO_REL_0000004)
-ReflexiveObjectProperty(obo:OBO_REL_0000004)
-
-# Object Property: obo:RO_0002220 (adjacent to)
-
-AnnotationAssertion(oboInOwl:id obo:RO_0002220 "RO:0002220")
-AnnotationAssertion(rdfs:label obo:RO_0002220 "adjacent to")
 
 # Object Property: HAO:_attached_to (attached_to)
 
