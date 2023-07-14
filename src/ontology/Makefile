@@ -344,7 +344,8 @@ IMP_LARGE=true # Global parameter to bypass handling of large imports
 .PHONY: mirror-aism
 .PRECIOUS: $(MIRRORDIR)/aism.owl
 mirror-aism: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://raw.githubusercontent.com/insect-morphology/aism/master/aism.owl -o $@.tmp.owl &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/aism.owl --create-dirs -o $(MIRRORDIR)/aism.owl --retry 4 --max-time 200 &&\
+		$(ROBOT) convert -i $(MIRRORDIR)/aism.owl -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
 

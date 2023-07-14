@@ -1,8 +1,0 @@
-id: hao 
-title: Hymenoptera Anatomy Ontology
-github_org: teleaslamellatus 
-repo: hao-odk
-import_group:
-  products:
-    - id: aism
-      mirror_from: https://raw.githubusercontent.com/insect-morphology/aism/master/aism.owl
